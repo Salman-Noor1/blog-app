@@ -8,24 +8,24 @@
     <title>Blog</title>
 </head>
 <body>
-    <div class="bg-black h-10 w-full text-white font-bold flex justify-between items-center px-8">
+    <div class="bg-black h-10 w-full text-sm font-semibold text-white font-bold flex justify-between items-center px-6">
        <h5>Magazine and Newspaper with news around the world</h5>
          <div class="space-x-6">
-            <a href="">Contact</a>
-            <a href="">Privacy Policy</a>
+            <a href="" class="hover:text-red-600 text xl">Contact</a>
+            <a href="" class="hover:text-red-600 text xl">Privacy Policy</a>
         </div>
     </div>
 
-    <div class="bg-gray-50 h-20 justify-between items-center w-full flex px-8">
-        <h1>Newspaper</h1>
-        <nav class="space-x-8 ">
-            <a href=""class="hover:text-red-600 text xl">Home Page</a>
-            <a href=""class="hover:text-red-600 text xl">Simple Post</a>
-            <a href=""class="hover:text-red-600 text xl">About</a>
-            <a href=""class="hover:text-red-600 text xl">Blog</a>
-        </nav>
+    <nav class="bg-gray-50 h-20 justify-between items-center w-full flex px-8">
+        <h1 class="font-black text-3xl capitalize">newspaper.</h1>
+        <div class="space-x-8 text-lg">
+            <a href="" class="hover:text-red-600 text xl">Home Page</a>
+            <a href="" class="hover:text-red-600 text xl">Simple Post</a>
+            <a href="" class="hover:text-red-600 text xl">About</a>
+            <a href="" class="hover:text-red-600 text xl">Blog</a>
+        </div>
 
-        <div class="space-x-2 flex">
+        <div class="space-x-4 flex">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 hover:text-red-600">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
               </svg>
@@ -39,32 +39,65 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
               </svg>
         </div>
-    </div>
-    <!-- <div class="w-full h-80 overflow-hidden">
-      <div class="flex translate-x-0 transition ease-in-out" id="imgs">
-         <img src="photos\p1.jpg" alt="p1" class="object-cover w-full h-80">
-         <img src="photos\p2.jpg" alt="p2" class="object-cover w-full h-80">
-         <img src="photos\p1.jpg" alt="p1" class="object-cover w-full h-80">
-         <img src="photos\p2.jpg" alt="p2" class="object-cover w-full h-80">
-      </div>
-    </div> -->
-    <div class="w-full h-40 items-center px-8">
-          <div class="container">
-            <div class="image-container" id="imgs">
-              <img src="photos\p1.jpg" alt="p1">
-              <img src="photos\p2.jpg" alt="p2">
-              <img src="photos\p3.jpg" alt="p3">
-              <img src="photos\p4.jpg" alt="p4">
-              <img src="photos\p5.jpg" alt="p5">
-              <img src="photos\p6.jpg" alt="p6">
-              <img src="photos\p3.jpg" alt="p7">
+      </nav>
+
+      <section>
+          <div class="relative">
+              <ul id="slider">
+                <li class="h-[75vh] relative">
+                  <img class="h-full w-full object-cover" src="photos\p1.jpg" alt="p1">
+                  <div class="absolute top-0 left-0 h-full w-full flex">
+                    <h2 class="text-4xl font-bold text-white my-auto w-full text-center px-20"></h2>
+                  </div>
+                </li>
+                <li class="h-[75vh] relative hidden">
+                  <img class="h-full w-full object-cover" src="photos\p2.jpg" alt="p2">
+                  <div class="absolute top-0 left-0 h-full w-full flex">
+                    <h2 class="text-4xl font-bold text-white my-auto w-full text-center px-20"></h2>
+                  </div>
+                </li>
+                <li class="h-[75vh] relative hidden">
+                  <img class="h-full w-full object-cover" src="photos\p3.jpg" alt="p3">
+                  <div class="absolute top-0 left-0 h-full w-full flex">
+                    <h2 class="text-4xl font-bold text-white my-auto w-full text-center px-20"></h2>
+                  </div>
+                </li>
+                <li class="h-[75vh] relative hidden">
+                  <img class="h-full w-full object-cover" src="photos\p4.jpg" alt="p4">
+                  <div class="absolute top-0 left-0 h-full w-full flex">
+                    <h2 class="text-4xl font-bold text-white my-auto w-full text-center px-20"></h2>
+                  </div>
+                </li>
+                <li class="h-[75vh] relative hidden">
+                  <img class="h-full w-full object-cover" src="photos\p5.jpg" alt="p5">
+                  <div class="absolute top-0 left-0 h-full w-full flex">
+                    <h2 class="text-4xl font-bold text-white my-auto w-full text-center px-20"></h2>
+                  </div>
+                </li>
+                <li class="h-[75vh] relative hidden">
+                  <img class="h-full w-full object-cover" src="photos\p6.jpg" alt="p6">
+                  <div class="absolute top-0 left-0 h-full w-full flex">
+                    <h2 class="text-4xl font-bold text-white my-auto w-full text-center px-20"></h2>
+                  </div>
+                </li>
+              </ul>
+            <div class="absolute px-5 flex h-full w-full top-0 left-0">
+              <div class="my-auto w-full flex justify-between">
+                <button onclick="prev()" class="bg-white p-3 rounded-full bg-opacity-40 shadow-lg hover:text-red-600 text xl ease-in">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                  </svg>            
+                </button>
+                <button onclick="next()" class="bg-white p-3 rounded-full bg-opacity-40 shadow-lg hover:text-red-600 text xl ease-in">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                  </svg>                        
+                </button>
+              </div>
             </div>
-            <div class="button-container">
-              <button id="left" class="btn">Prev</button>
-              <button id="right" class="btn">Next</button>
-            </div>
-          </div>
-    </div>
+        </div>
+      </section>
+
     <script src="main.js"></script>
 </body>
 </html>

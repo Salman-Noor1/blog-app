@@ -1,42 +1,30 @@
-const imgs = document.getElementById('imgs')
-const leftBtn = document.getElementById('left')
-const rightBtn = document.getElementById('right')
+currentSlideID = 1;
 
-const img = document.querySelectorAll('#imgs img')
+sliderElement = document.getElementById('slider');
+totalSlides = sliderElement.childElementCount;
 
-let idx = 0
-
-let interval = setInterval(run, 3500)
-
-function run() {
-    idx++
-    changeImage()
-}
-
-function changeImage() {
-    if(idx > img.length -1) {
-         idx = 0
-    } else if(idx < 0){
-        idx = img.length -1
+function next() {
+    if (currentSlideID < totalSlides) {
+        currentSlideID++;
+        showSlide();
     }
-
-    imgs.style.transform = `translateX(${-idx * 500}px)`
 }
 
-function resetInterval() {
-    clearInterval(interval)
-    interval = setInterval(run, 3500)
+function prev() {
+    if (currentSlideID > 1) {
+        currentSlideID--;
+        showSlide();
+    }
 }
 
-
-rightBtn.addEventListener('click', () => {
-    idx++
-
-    changeImage()
-})
-
-leftBtn.addEventListener('click', () => {
-    idx--
-
-    changeImage()
-})
+function showSlide() {
+    slides = document.getElementById('slider').getElementsByTagName('li')
+    for (let index = 0; index < totalSlides; index++) {
+        const element = slides[index];
+        if(currentSlideID===index+1){
+            element.classList.remove('hidden')
+        }else{
+            element.classList.add('hidden')
+        }
+    }
+}
